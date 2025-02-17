@@ -1,0 +1,354 @@
+/*navigation styles started*/
+ #nav{
+    background-color: navy;
+    display: flex;
+    line-height: 50px;
+    word-spacing: 40px;
+    flex-wrap: wrap;
+    gap: 350px;
+    padding-left: 20px;
+}
+#nav a{
+    text-decoration: none;
+    color: white;
+    list-style: none;
+    font-family: serif;
+    font-size: larger;
+}
+#nav a:hover{
+    color: aqua;
+}
+#menu{
+    display: flex;
+    list-style-type: none;
+    gap: 100px;
+    padding-right: 30px;
+    flex-wrap: wrap;
+}
+#bars{
+    display: none;
+}
+#nav2{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    border: 1px solid navy;
+    background-color: navy;
+    width: 300px;
+    height: 90vh;
+    margin-left: 64.8%;
+    text-align: center;
+    gap: 100px;
+    animation-name: navi;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    display: none;
+}
+#nav2 a{
+    color: white;
+    text-decoration: none;
+
+}
+@media screen and (max-width: 768px){
+    #nav{
+        /* width: 100vw;
+        margin-left: -10px; */
+        gap: 100px;
+        justify-content: space-between;
+    }
+    #menu{
+        display: none;
+    }
+    #bars{
+        display: block;
+        font-size: 30px;
+        margin-top: -10px;
+        margin-right: 20px;
+    }
+    @keyframes navi {
+        from{
+            transform: translateX(100px);
+            opacity: 0;
+        }
+        to{
+            transform: translate(-200px);
+        }
+        
+    }
+}
+@media screen and (min-width: 769px){
+    #nav{
+        gap: 80px;
+    }
+    #nav2{
+        display: none;
+    }
+    
+}
+@media screen and (min-width: 1023px){
+    #nav{
+        gap: 70px;
+    }
+    #nav2{
+        display: none;
+    }
+    
+}
+
+
+
+
+
+
+
+/*navigation styles ended*/
+
+/*Calculator style starts*/
+#calculator{
+    border: 4px solid black;
+    background-color: DarkSeaGreen;
+    border-radius: 20px;
+    width: 420px;
+    height: 550px;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: -1;
+}
+#calculator h1{
+    background-color: black;
+    margin-top: 1%;
+    width: 410px;
+    height: 70px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#cal{
+    margin-top: -1%;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    width: 410px;
+    height: 480px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    gap: 7px;
+}
+i{
+    margin-left: -30%;
+}
+#input{
+    grid-column: 1/5;
+    border-radius: 10px;
+    background-color: gray;
+}
+.num,.operation,.others{
+    margin: 10px;
+    border-radius: 30%;
+    background-color: cadetblue;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 5px 5px 8px 1px black;
+}
+.num{
+    background-color: azure;
+}
+.operation{
+    background-color: orange;
+}
+.others{
+    background-color: magenta;
+}
+
+.num:hover{
+    background-color: LightSlateGray;
+}
+.operation:hover{
+    background-color: gold;
+}
+.others:hover{
+    background-color: palevioletred;
+}
+
+body {
+    --s: 60px; /* control the size*/
+    --c1: #dee8be;
+    --c2: #cd8c52;
+    
+    --c:#0000 71%,var(--c1) 0 79%,#0000 0;
+    --_s:calc(var(--s)/2)/calc(2*var(--s)) calc(2*var(--s));
+    background:
+      linear-gradient(45deg,var(--c))
+       calc(var(--s)/-2) var(--_s),
+      linear-gradient(135deg,var(--c))
+       calc(var(--s)/2) var(--_s),
+      radial-gradient(var(--c1) 35%,var(--c2) 37%)
+       0 0/var(--s) var(--s);
+  }
+
+  @media all and (min-width:320px) and (max-width: 475px){
+    #calculator{
+    width: 300px;
+    height: 500px;
+    }
+    #calculator h1{
+    width: 220px;
+    height: 70px;
+    }
+    #cal{
+    width: 220px;
+    height: 400px;
+    }
+    .num,.operation,.others{
+    font-size: 10px;
+    width: 40px;
+    margin-left: -5%;
+    }
+    #input{
+    height: 70px;
+    }
+    
+  }
+
+  @media all and (min-width:768px) and (max-width: 1024px){
+    #calculator{
+        width: 420px;
+        height: 590px;
+        }
+        #calculator h1{
+            width: 410px;
+            height: 90px;
+        }
+        #cal{
+            width: 410px;
+            height: 500px;
+        }
+        .num,.operation,.others{
+        font-size: 10px;
+        width: 60%;
+        }
+        #input{
+        height: 70px;
+        }
+  }
+/*Calculator style starts*/
+
+/*BMI style starts*/
+
+#bmi{
+    border: 1px solid white;
+    background-color: white;
+    margin-top: 70px;
+    width: 800px;
+    height: 400px;
+}
+#bmititle{
+    border: 1px solid blue;
+    background-color: blue;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
+#datacard{
+    border: 2px solid black;
+    height: 100px;
+    text-align: center;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 2px aqua;
+    margin-left: 200px;
+    margin-top: 20px;
+}
+#slider{
+    margin-top: 30px;
+    text-align: center;
+}
+#weightrange:hover{
+    cursor: pointer;
+}
+#heightrange:hover{
+    cursor: pointer;
+}
+#btn{
+    text-align: center;
+    margin-left: 350px;
+    margin-top: 50px;
+    background-color: aquamarine;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+}
+#bmimaindiv{
+    display: none;
+}
+
+/*BMI style ends*/
+
+#agecalc{
+    border: 2px solid black;
+    text-align: center;
+    width: 700px;
+    border-radius: 10px;
+    margin-top: 90px;
+    height: 500px;
+}
+#agecalc h2{
+    background-color: aqua;
+    width: 700px;
+    margin-left: -12px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#agesection{
+    border: 2px solid black;
+    margin-top: 50px;
+    background-color:aliceblue;
+    padding: 30px;
+    height: 380px;
+}
+#dates{
+    width: 300px;
+    text-align: center;
+    margin-left: 150px; 
+}
+#ageinput{
+    height: 150px;
+}
+#ageinput button{
+    margin-left: 230px;
+}
+/*Loan calculator start*/
+
+#loancalc{
+    border: 2px solid black;
+    height: 400px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+#amountdata input{
+    padding: 5px;
+    width: 400px;
+    border-radius: 20px;
+}
+#amountdata i{
+    margin-left: 40px;
+}
+#emi{
+    font-size: 21px;
+}
+
+
+
+
+/*Loan Calculator end*/
+
+
+

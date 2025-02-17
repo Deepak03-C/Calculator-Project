@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="navigation" class="container">
+      <nav id="nav">
+        <a href="#" class="logo">Deepak_Kumar</a>
+        <ul id="menu">
+          <li><a href="#calculatormaindiv" onclick="clacview()">Calculator</a></li>
+          <li><a href="#bmimaindiv" onclick="bmiview()">BMI</a></li>
+          <li><a href="#agecalculatormaindiv" onclick="agecalview()">AgeCalculator</a></li>
+          <li><a href="#loancalculatormaindiv" onclick="loancalview()">LoanCalculator</a></li>
+        </ul>
+        <a href="#" id="bars"><i class="fa-solid fa-bars"></i></a>
+      </nav>
+      <div id="nav2">
+          <a href="#calculatormaindiv">Calculator</a>
+          <a href="#bmimaindiv">BMI</a>
+          <a href="#agecalculatormaindiv">AgeCalculator</a>
+          <a href="#loancalculatormaindiv">LoanCalculator</a>
+      </div>
+    </div>
+    
+      
+
+    <div id="calculatormaindiv" style="display: none;" >
+      <div id="calculator" class="container bg-info" >
+        <h1>Calculator</h1>
+      <div id="cal">
+        <input type="text" name="" id="input" style="text-align: right; font-size: 51px;" />
+        <button type="button" value="" name="" id="item1" class="others" onclick="clr()">AC</button>
+        <button type="button" value="clear" name="" id="item3" class="others" onclick="back()">clear</button>
+        <button type="button" value="%" name="" id="item2" class="operation" onclick="show(value)">%</button>
+        <button type="button" value="/" name="" id="item4" class="operation" onclick="show(value)">/</button>
+        <button type="button" value="7" name="" id="item5" class="num" onclick="show(value)" >7</button>
+        <button type="button" value="8" name="" id="item6" class="num" onclick="show(value)" >8</button>
+        <button type="button" value="9" name="" id="item7" class="num" onclick="show(value)" >9</button>
+        <button type="button" value="*" name="" id="item8" class="operation" onclick="show(value)">x</button>
+        <button type="button" value="4" name="" id="item9" class="num" onclick="show(value)" >4</button>
+        <button type="button" value="5" name="" id="item10" class="num" onclick="show(value)" >5</button>
+        <button type="button" value="6" name="" id="item11" class="num" onclick="show(value)" >6</button>
+        <button type="button" value="-" name="" id="item12" class="operation" onclick="show(value)"><b>-</b></button>
+        <button type="button" value="1" name="" id="item13" class="num" onclick="show(value)" >1</button>
+        <button type="button" value="2" name="" id="item14" class="num" onclick="show(value)" >2</button>
+        <button type="button" value="3" name="" id="item15" class="num" onclick="show(value)" >3</button>
+        <button type="button" value="+" name="" id="item16" class="operation" onclick="show(value)">+</button>
+        <button type="button" value="00" name="" id="item17" class="num" onclick="show(value)" >00</button>
+        <button type="button" value="0" name="" id="item18" class="num" onclick="show(value)" >0</button>
+        <button type="button" value="." name="" id="item19"class="num" onclick="show(value)"><b>.</b></button>
+        <button type="button" value="=" name="" id="item20" class="operation" onclick="operation()">=</button>
+      </div>
+      </div>
+    </div>
+
+    <div id="bmimaindiv" style="display: none;">
+      <div class="container" id="bmi">
+        <h1 id="bmititle">BMI Calculator</h1>
+        <section id="datacard">
+          <h2 id="percent"></h2>
+          <span id="data">Enter Height and Weight</span>
+        </section>
+
+        <section id="slider">
+          <label for="">Weight range</label>
+          <input type="range" name="weightrange" id="weightrange" min="1" max="200" value="50"> <span>Value : <span id="weightvalue">kg</span></span> <br> <br>
+          <label for="">Height range</label>
+          <input type="range" name="heightrange" id="heightrange" min="50" max="300" value="150">  <span>Value : <span id="heightvalue">cm</span></span>
+        </section>
+        <button type="button" id="btn" onclick="calculateBMI()">Calculate</button>
+
+      </div>
+    </div>
+
+    <div id="agecalculatormaindiv" style="display: none;">
+      <div class="container bg-success" id="agecalc">
+        <h2>Find Your Age!!</h2>
+        <section id="agesection" class="card">
+          <section id="ageinput" class="card rounded-pill bg-info">
+            <label for="dates"><b>Enter Your DOB</b></label>
+            <input type="date" name="dates" id="dates" class="form-control"> <br>
+            <button type="button" class="btn-primary p-2 rounded-pill w-25" onclick="calculateage()">Calculate</button>
+          </section>
+          <br>
+          <p id="agedata"></p>
+
+        </section>
+
+      </div>
+    </div>
+
+    <div id="loancalculatormaindiv">
+      <div class="container card w-50 bg-info rounded-pill" id="loancalc">
+        <h2>Loan Calculator</h2>
+        <section id="amountdata">
+          <i class="fa-solid fa-indian-rupee-sign"></i>
+          <input type="number" name="" id="amount" placeholder="Enter Loan Amount"> <br> <br>
+          <i class="fa-solid fa-percent"></i>
+          <input type="number" name="" id="intrestrate" placeholder="Enter Intrest Rate"> <br> <br>
+          <i class="fa-solid fa-calendar-days"></i>
+          <input type="number"  name="" id="days" placeholder="Enter Months to repay"> <br> <br>
+          <button type="submit" class="btn-warning p-2 rounded" onclick="calculateloan()">Calculate</button>
+        </section> <br>
+        <p id="emi"><b></b></p>
+
+      </div>
+    </div>
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/c0416689b2.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
