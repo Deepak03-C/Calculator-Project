@@ -84,6 +84,7 @@ function calculateBMI() {
 }
 
 function clacview() {
+  document.getElementById("input").value = "";
   document.getElementById("calculatormaindiv").style.display = "block";
   document.getElementById("bmimaindiv").style.display = "none";
   document.getElementById("agecalculatormaindiv").style.display = "none";
@@ -91,18 +92,21 @@ function clacview() {
 }
 
 function bmiview() {
+  document.getElementById("input").value = "";
   document.getElementById("bmimaindiv").style.display = "block";
   document.getElementById("calculatormaindiv").style.display = "none";
   document.getElementById("agecalculatormaindiv").style.display = "none";
   document.getElementById("loancalculatormaindiv").style.display = "none";
 }
 function agecalview() {
+  document.getElementById("input").value = "";
   document.getElementById("bmimaindiv").style.display = "none";
   document.getElementById("calculatormaindiv").style.display = "none";
   document.getElementById("agecalculatormaindiv").style.display = "block";
   document.getElementById("loancalculatormaindiv").style.display = "none";
 }
 function loancalview() {
+  document.getElementById("input").value = "";
   document.getElementById("bmimaindiv").style.display = "none";
   document.getElementById("calculatormaindiv").style.display = "none";
   document.getElementById("agecalculatormaindiv").style.display = "none";
